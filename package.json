@@ -1,0 +1,34 @@
+{
+  "name": "pxrem-loader",
+  "version": "0.0.1",
+  "description": "Transforming css from px to rem",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "px",
+    "rem",
+    "css",
+    "style",
+    "postcss",
+    "webpack",
+    "loader"
+  ],
+  "author": "liyh <cupools@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "loader-utils": "^0.2.16",
+    "lodash.assign": "^4.2.0",
+    "pxrem": "github:cupools/pxrem"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cupools/pxrem-loader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cupools/pxrem-loader/issues"
+  },
+  "homepage": "https://github.com/cupools/pxrem-loader#readme"
+}
