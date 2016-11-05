@@ -12,8 +12,9 @@ var defaultOptions = {
   commentFilter: 'no'
 }
 
-module.exports = function(content) {
-  var config = loaderUtils.getLoaderConfig(this, 'pxrem')
-  var options = assign({}, defaultOptions, config)
-  return pxrem(content, options)
+module.exports = function (content) {
+  var config = loaderUtils.getLoaderConfig(this, this.options ? 'pxrem' : '')
+  var option = assign({}, defaultOptions, config)
+
+  return pxrem(content, option)
 }
