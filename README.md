@@ -1,12 +1,8 @@
-# pxrem-loader
+## pxrem-loader
+[![Build Status](https://travis-ci.org/cupools/pxrem-loader.svg?branch=master)](https://travis-ci.org/cupools/pxrem-loader)
+[![Coverage Status](https://coveralls.io/repos/github/cupools/pxrem-loader/badge.svg?branch=master)](https://coveralls.io/github/cupools/pxrem-loader?branch=master)
+
 > Transforming css from px to rem, base on [pxrem](https://github.com/cupools/pxrem)
-
-## Todo
-
-- [x] Test coverage
-- [x] Examples
-- [ ] 中文文档
-- [ ] Publish to npm
 
 ## Getting Started
 
