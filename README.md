@@ -1,13 +1,6 @@
 # pxrem-loader
 > Transforming css from px to rem, base on [pxrem](https://github.com/cupools/pxrem)
 
-## Todo
-
-- [x] Test coverage
-- [ ] Examples
-- [ ] 中文文档
-- [ ] Publish to npm
-
 ## Usage
 
 ```js
@@ -16,7 +9,7 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.css$/,
-      loader: 'style!css!pxrem?root=75&filter=border'
+      loader: 'style!css!pxrem?root=75'
     }]
   }
 }

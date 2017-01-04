@@ -7,7 +7,7 @@ import loader from '../index'
 Chai.use(chaiCss)
 Chai.should()
 
-describe('webpack config', function () {
+describe('webpack config', () => {
   const stylesheet = [
     '.foo {',
     'width: 15px;',
@@ -17,7 +17,7 @@ describe('webpack config', function () {
     '}'
   ].join('\n')
 
-  it('should get default option', function () {
+  it('should get default option', () => {
     loader.call({}, stylesheet).should.have.rule('.foo')
       .and.have.decl({
         width: '0.2rem',
@@ -27,22 +27,22 @@ describe('webpack config', function () {
       })
   })
 
-  it('should get query option', function () {
-    let option = {
-      query: '?root=75&filter=width|bor&fixed=2'
+  it('should get query option', () => {
+    const option = {
+      query: '?root=75&fixed=2'
     }
     loader.call(option, stylesheet).should.have.rule('.foo')
       .and.have.decl({
-        width: '15px',
+        width: '0.2rem',
         height: '0.13rem',
         fontSize: '16px',
-        border: '1px solid #000'
+        border: '0.01rem solid #000'
       })
   })
 
-  it('should get extend option', function () {
-    let option = {
-      query: '?root=75&filter=width|bor',
+  it('should get extend option', () => {
+    const option = {
+      query: '?root=75',
       options: {
         pxrem: {
           root: 10,
