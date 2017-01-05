@@ -8,7 +8,7 @@
 ## Getting Started
 
 ```bash
-$ npm i cupools/pxrem-loader
+$ npm install --save-dev pxrem-loader
 ```
 ```js
 // webpack.config.js
