@@ -18,7 +18,10 @@ describe('webpack config', () => {
   ].join('\n')
 
   it('should get default option', () => {
-    loader.call({}, stylesheet).should.have.rule('.foo')
+    const option = {
+      query: {}
+    }
+    loader.call(option, stylesheet).should.have.rule('.foo')
       .and.have.decl({
         width: '0.2rem',
         height: '0.133333rem',
@@ -42,19 +45,16 @@ describe('webpack config', () => {
 
   it('should get extend option', () => {
     const option = {
-      query: '?root=75',
-      options: {
-        pxrem: {
-          root: 10,
-          filter: prop => prop !== 'height',
-          fixed: 2
-        }
+      query: {
+        root: 10,
+        filter: prop => prop !== 'height',
+        fixed: 2
       }
     }
     loader.call(option, stylesheet).should.have.rule('.foo')
       .and.have.decl({
         width: '15px',
-        height: '0.13rem',
+        height: '1rem',
         fontSize: '16px',
         border: '1px solid #000'
       })
