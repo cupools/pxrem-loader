@@ -1,6 +1,6 @@
 {
   "name": "pxrem-loader",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Transforming css from px to rem",
   "main": "index.js",
   "scripts": {

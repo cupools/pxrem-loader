@@ -14,9 +14,19 @@ $ npm install --save-dev pxrem-loader
 // webpack.config.js
 module.exports = {
   module: {
-    loaders: [{
+    rules: [{
       test: /\.css$/,
-      loader: 'style!css!pxrem?root=75&fixed=6'
+      use: [
+        { loader: 'style' },
+        { loader: 'css' },
+        {
+          loader: 'pxrem-loader',
+          options: {
+            root: 75,
+            fixed: 6
+          }
+        }
+      ]
     }]
   }
 }
